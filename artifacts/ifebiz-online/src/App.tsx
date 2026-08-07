@@ -197,25 +197,10 @@ function Hero() {
           </div>
           <div className="hero-note"><span className="note-dot" /><span><strong>Local knowledge.</strong> Professional presentation.</span></div>
         </div>
-        <div className="hero-art reveal reveal-delay" aria-label="A sample business website presentation">
-          <div className="hero-sun" />
-          <div className="hero-card">
-            <div className="hero-card-top"><span className="hero-mini-brand"><img src={logo} alt="" /> ifebiz online</span><span>MENU&nbsp;&nbsp; ABOUT&nbsp;&nbsp; ORDER</span></div>
-            <div className="hero-window">
-              <div className="window-bar"><div className="window-lines"><i /><i /><i /></div><div className="window-menu"><b>THE GREEN TABLE</b><span>Welcome, have a taste</span></div></div>
-              <div className="window-image" />
-              <div className="window-content"><b>Good food,<br />close to home.</b><span /></div>
-            </div>
-          </div>
-          <div className="floating-pill"><span className="pill-check"><Check size={12} /></span> Enquiries made easy</div>
-          <div className="floating-stat"><div><strong>24/7</strong><small>your business online</small></div><ArrowUpRightIcon /></div>
-        </div>
       </div>
     </section>
   );
 }
-
-function ArrowUpRightIcon() { return <ArrowRight size={18} style={{ transform: 'rotate(-45deg)' }} />; }
 
 function TrustBar() {
   const trust: [string, IconType][] = [['Restaurants', Utensils], ['Fashion', Palette], ['Beauty', Scissors], ['Real Estate', Building2], ['Hotels', Compass], ['Schools', GraduationCap], ['Churches', Church], ['Pharmacies', CircleDollarSign], ['Supermarkets', ShoppingCart], ['Professionals', Handshake]];
@@ -279,7 +264,7 @@ function Testimonials() {
   const shift = (direction: number) => document.getElementById('testimonial-track')?.scrollBy({ left: direction * 290, behavior: 'smooth' });
   return <section id="testimonials" className="section warm-section"><div className="container">
     <div className="testimonial-intro"><div className="section-heading"><div className="eyebrow">Words from the other side</div><h2>Good work should leave people <span className="serif">smiling.</span></h2><p>Real conversations from businesses we have helped bring online.</p></div><div className="carousel-controls"><button className="icon-button" onClick={() => shift(-1)} aria-label="Previous testimonial" data-testid="button-testimonial-previous"><ArrowLeft size={18} /></button><button className="icon-button" onClick={() => shift(1)} aria-label="Next testimonial" data-testid="button-testimonial-next"><ArrowRight size={18} /></button></div></div>
-    <div className="testimonial-track" id="testimonial-track">{testimonials.map(([image, name, text], index) => <article className="testimonial-card" key={name} data-testid={`card-testimonial-${index}`}><div className="phone-frame"><img src={image} alt={`${name} testimonial conversation`} loading="lazy" /></div><div className="testimonial-meta"><div><strong>{name}</strong><div style={{ color: '#728077', fontSize: '11px', marginTop: '4px' }}>{text}</div></div><span>Client note</span></div></article>)}</div>
+     <div className="testimonial-track" id="testimonial-track">{testimonials.map(([image, name, text], index) => <article className="testimonial-card" key={name} data-testid={`card-testimonial-${index}`}><div className={`phone-frame ${name === 'ABO Wears' ? 'phone-frame-wide' : ''}`}><img src={image} alt={`${name} testimonial conversation`} loading="lazy" /></div><div className="testimonial-meta"><div><strong>{name}</strong><div style={{ color: '#728077', fontSize: '11px', marginTop: '4px' }}>{text}</div></div><span>Client note</span></div></article>)}</div>
   </div></section>;
 }
 
