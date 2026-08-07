@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "IfeBiz Online"
+description = "A premium one-page marketing website for IfeBiz Online, helping businesses in Ile-Ife build professional online presences and convert visitors into WhatsApp enquiries."
+version = "1.0.0"
+id = "artifacts/ifebiz-online"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24373
+
+[services.development]
+run = "pnpm --filter @workspace/ifebiz-online run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/ifebiz-online", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/ifebiz-online/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24373"
+BASE_PATH = "/"
