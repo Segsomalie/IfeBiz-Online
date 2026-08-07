@@ -212,19 +212,13 @@ function TrustBar() {
   </section>;
 }
 
-function Benefits() {
-  return <section id="benefits" className="section warm-section">
+function WhatChanges() {
+  return <section className="section what-changes-section warm-section">
     <div className="container">
-      <div className="benefits-layout">
-        <div className="benefits-stamp">
-          <div className="eyebrow">What changes</div>
-          <p className="stamp-big">Your next customer is already looking.</p>
-          <p>A good website helps them find you, trust you and take the next step without stress.</p>
-        </div>
-        <div>
-          <div className="section-heading"><div className="eyebrow">A website that works for you</div><h2>More than a page. A better way to be <span className="serif">seen.</span></h2><p>Give your business a polished place to welcome people, answer questions and make it easy to start a conversation.</p></div>
-          <div className="benefit-list">{benefits.map(([title, text, Icon], index) => <article className="benefit-item" key={title} data-testid={`card-benefit-${index}`}><div className="benefit-icon"><Icon size={20} /></div><div><h3>{title}</h3><p>{text}</p></div></article>)}</div>
-        </div>
+      <div className="benefits-stamp what-changes-banner">
+        <div className="eyebrow">What changes</div>
+        <p className="stamp-big">Your next customer is already looking.</p>
+        <p>A good website helps them find you, trust you and take the next step without stress.</p>
       </div>
     </div>
   </section>;
@@ -244,10 +238,11 @@ function Packages() {
   </section>;
 }
 
-function WhyWebsite() {
+function Benefits() {
   return <section id="why" className="section warm-section">
-    <div className="container"><div className="section-heading"><div className="eyebrow">Why it matters</div><h2>Being online should feel like a <span className="serif">business advantage.</span></h2><p>Customers are already making decisions online. Help them make the right one about you.</p></div>
-      <div className="story-grid">{stories.map(([number, title, copy]) => <article className="story-card" key={title} data-testid={`card-story-${number}`}><span className="story-number">{number}</span><h3>{title}</h3><p>{copy}</p></article>)}</div>
+    <div className="container">
+      <div className="section-heading"><div className="eyebrow">A website that works for you</div><h2>More than a page. A better way to be <span className="serif">seen.</span></h2><p>Give your business a polished place to welcome people, answer questions and make it easy to start a conversation.</p></div>
+      <div className="benefit-list">{benefits.map(([title, text, Icon], index) => <article className="benefit-item" key={title} data-testid={`card-benefit-${index}`}><div className="benefit-icon"><Icon size={20} /></div><div><h3>{title}</h3><p>{text}</p></div></article>)}</div>
     </div>
   </section>;
 }
@@ -288,7 +283,7 @@ function Footer() {
 }
 
 function Home() {
-  return <div className="site-shell"><Header /><main><Hero /><TrustBar /><Benefits /><Packages /><WhyWebsite /><WebsiteTypes /><Testimonials /><Samples /><Choose /><Contact /></main><Footer /><a className="float-whatsapp" href={whatsapp("Hello, I'd like to get a website for my business.")} target="_blank" rel="noreferrer" aria-label="Chat with IfeBiz Online on WhatsApp" data-testid="link-floating-whatsapp"><MessageCircle size={20} /> <span>Chat on WhatsApp</span></a></div>;
+  return <div className="site-shell"><Header /><main><Hero /><TrustBar /><WhatChanges /><Packages /><Testimonials /><Samples /><Benefits /><WebsiteTypes /><Choose /><Contact /></main><Footer /><a className="float-whatsapp" href={whatsapp("Hello, I'd like to get a website for my business.")} target="_blank" rel="noreferrer" aria-label="Chat with IfeBiz Online on WhatsApp" data-testid="link-floating-whatsapp"><MessageCircle size={20} /> <span>Chat on WhatsApp</span></a></div>;
 }
 
 function Router() {

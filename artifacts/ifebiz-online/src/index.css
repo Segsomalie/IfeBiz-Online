@@ -162,6 +162,8 @@ img { max-width: 100%; display: block; }
 .benefits-stamp > * { position: relative; }
 .stamp-big { margin: 0 0 12px; font: 800 43px/.96 var(--font-display); letter-spacing: -.06em; }
 .benefits-stamp p { margin: 0; font-size: 15px; line-height: 1.55; }
+.what-changes-section { padding-top: 78px; padding-bottom: 78px; }
+.what-changes-banner { position: relative; top: auto; width: min(100%, 760px); margin-inline: auto; transform: rotate(-1deg); }
 .benefit-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0 36px; }
 .benefit-item { display: grid; grid-template-columns: 45px 1fr; gap: 15px; padding: 27px 0; border-top: 1px solid #dfd8c7; }
 .benefit-item:nth-child(-n+2) { border-top: 0; padding-top: 0; }
@@ -298,6 +300,7 @@ img { max-width: 100%; display: block; }
   .trust-items { justify-content: flex-start; margin-top: 16px; }
   .benefits-layout, .choose-wrap, .contact-grid { grid-template-columns: 1fr; gap: 43px; }
   .benefits-stamp { position: relative; top: 0; max-width: 360px; }
+  .what-changes-banner { max-width: 100%; }
   .benefit-list { gap: 0 20px; }
   .type-grid { grid-template-columns: repeat(2, 1fr); }
   .testimonial-intro { display: block; }
