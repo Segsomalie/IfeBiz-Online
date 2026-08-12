@@ -1,9 +1,11 @@
-# [Project name]
+# IfeBiz Online
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+A premium one-page marketing website for IfeBiz Online, helping businesses in Ile-Ife build professional online presences and convert visitors into WhatsApp enquiries.
 
 ## Run & Operate
 
+- `pnpm install` — install workspace dependencies
+- `pnpm --filter @workspace/ifebiz-online run dev` — run the frontend locally
 - `pnpm --filter @workspace/api-server run dev` — run the API server (port 5000)
 - `pnpm run typecheck` — full typecheck across all packages
 - `pnpm run build` — typecheck + build all packages
@@ -22,23 +24,29 @@ _Replace the heading above with the project's name, and this line with one sente
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `artifacts/ifebiz-online` — React + Vite frontend
+- `artifacts/api-server` — Express API
+- `lib/db` — Drizzle database package
+- `netlify.toml` — Netlify build settings and SPA fallback
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- The frontend is deployed as a static Vite build on Netlify.
+- Netlify rewrites all routes to the React entry point so client-side routes do not return a 404.
+- The API remains a separate service and is not bundled into the static frontend deployment.
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+IfeBiz Online presents website design and digital presence services for businesses in Ile-Ife, with clear service information and WhatsApp enquiry calls to action.
 
 ## User preferences
 
-_Populate as you build — explicit user instructions worth remembering across sessions._
+None recorded.
 
 ## Gotchas
 
-_Populate as you build — sharp edges, "always run X before Y" rules._
+- Netlify must use the repository root as the base directory so the workspace package paths resolve.
+- Netlify must publish `artifacts/ifebiz-online/dist/public`, not the repository root or the frontend source directory.
 
 ## Pointers
 

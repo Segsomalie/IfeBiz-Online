@@ -1,0 +1,8 @@
+[build]
+  command = "PORT=24373 BASE_PATH=/ pnpm --filter @workspace/ifebiz-online run build"
+  publish = "artifacts/ifebiz-online/dist/public"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
