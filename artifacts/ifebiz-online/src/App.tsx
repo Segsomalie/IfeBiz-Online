@@ -103,7 +103,7 @@ const packages = [
   },
   {
     name: 'Enterprise', price: '₦120,000', intro: 'For businesses needing advanced functionality.',
-    features: ['Everything in Premium', 'E-commerce', 'Customer accounts', 'Order history', 'Online payments', 'Admin Dashboard', 'Product management', 'Google Analytics', 'Meta Pixel', 'Sales tracking', 'Advanced reports', 'Future scalability'],
+    features: ['Everything in Premium', 'E-commerce', 'Customer accounts', 'Order history', 'Online payments', 'Admin Dashboard', 'Product management', 'Sales tracking', 'Advanced reports', 'Future scalability'],
   },
 ];
 
