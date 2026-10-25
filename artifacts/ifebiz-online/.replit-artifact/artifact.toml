@@ -1,7 +1,7 @@
 kind = "web"
 previewPath = "/"
 title = "IfeBiz Online"
-description = "A premium one-page marketing website for IfeBiz Online, helping businesses in Ile-Ife build professional online presences and convert visitors into WhatsApp enquiries."
+description = "A premium one-page marketing website for IfeBiz Online, based in Ile-Ife and helping businesses across Osun State and beyond build professional online presences and convert visitors into WhatsApp enquiries."
 version = "1.0.0"
 id = "artifacts/ifebiz-online"
 router = "path"

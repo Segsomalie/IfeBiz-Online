@@ -188,9 +188,9 @@ function Hero() {
     <section id="home" className="hero">
       <div className="container hero-grid">
         <div className="hero-copy reveal">
-          <div className="eyebrow hero-kicker">Made for Ile-Ife businesses</div>
+          <div className="eyebrow hero-kicker">Made for Nigerian local businesses</div>
           <h1>Give Your Business a <em>Professional</em> Online Presence</h1>
-          <p className="hero-description">We help businesses in Ile-Ife attract more customers, build trust, receive enquiries 24/7 and grow with beautiful mobile-friendly websites.</p>
+          <p className="hero-description">We help businesses across Osun State and beyond attract more customers, build trust, receive enquiries 24/7 and grow with beautiful mobile-friendly websites.</p>
           <div className="hero-actions">
             <a className="button button-primary" href={whatsapp("Hello, I'd like to get a website for my business.")} target="_blank" rel="noreferrer" data-testid="link-hero-whatsapp"><MessageCircle size={17} /> Get Your Website</a>
             <a className="button button-outline" href="#packages" data-testid="link-hero-packages">View Packages <ArrowDownRight size={16} /></a>
@@ -206,7 +206,7 @@ function TrustBar() {
   const trust: [string, IconType][] = [['Restaurants', Utensils], ['Fashion', Palette], ['Beauty', Scissors], ['Real Estate', Building2], ['Hotels', Compass], ['Schools', GraduationCap], ['Churches', Church], ['Pharmacies', CircleDollarSign], ['Supermarkets', ShoppingCart], ['Professionals', Handshake]];
   return <section className="trust-bar" aria-label="Business categories">
     <div className="container trust-inner">
-      <div className="trust-copy">Helping businesses in Ile-Ife build their online presence.<span>From first impression to WhatsApp enquiry.</span></div>
+      <div className="trust-copy">Based in Ile-Ife, building websites for businesses across Osun State and beyond.<span>From first impression to WhatsApp enquiry.</span></div>
       <div className="trust-items">{trust.map(([label, Icon]) => <span className="trust-item" key={label}><Icon size={14} />{label}</span>)}</div>
     </div>
   </section>;
@@ -279,7 +279,7 @@ function Contact() {
 }
 
 function Footer() {
-  return <footer className="footer"><div className="container"><div className="footer-top"><div><Brand /><p className="footer-tagline">Helping Ile-Ife businesses look professional online and turn visitors into WhatsApp enquiries.</p></div><div><h4>Explore</h4><div className="footer-links">{navItems.slice(1, 5).map(([label, id]) => <a href={`#${id}`} key={id} data-testid={`link-footer-${id}`}>{label}</a>)}</div></div><div><h4>Contact</h4><div className="footer-links"><a href="tel:07054839417" data-testid="link-footer-phone">07054839417</a><a href="#contact" data-testid="link-footer-address">Megatron Studios, Ede Road<br />Odo Eran, Ile-Ife</a></div></div><div><h4>Keep in touch</h4><div className="socials"><a className="icon-button" href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram" data-testid="link-instagram"><Instagram size={16} /></a><a className="icon-button" href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook" data-testid="link-facebook"><Facebook size={16} /></a><a className="icon-button" href="https://www.youtube.com/@IfeBizOnline" target="_blank" rel="noreferrer" aria-label="YouTube" data-testid="link-youtube"><Youtube size={16} /></a></div></div></div><div className="footer-bottom"><span>© 2026 IfeBiz Online.</span><span>Helping Ile-Ife Businesses Grow Online.</span></div></div></footer>;
+  return <footer className="footer"><div className="container"><div className="footer-top"><div><Brand /><p className="footer-tagline">Based in Ile-Ife, serving businesses across Osun State and beyond with professional websites that turn visitors into WhatsApp enquiries.</p></div><div><h4>Explore</h4><div className="footer-links">{navItems.slice(1, 5).map(([label, id]) => <a href={`#${id}`} key={id} data-testid={`link-footer-${id}`}>{label}</a>)}</div></div><div><h4>Contact</h4><div className="footer-links"><a href="tel:07054839417" data-testid="link-footer-phone">07054839417</a><a href="#contact" data-testid="link-footer-address">Megatron Studios, Ede Road<br />Odo Eran, Ile-Ife</a></div></div><div><h4>Keep in touch</h4><div className="socials"><a className="icon-button" href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram" data-testid="link-instagram"><Instagram size={16} /></a><a className="icon-button" href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook" data-testid="link-facebook"><Facebook size={16} /></a><a className="icon-button" href="https://www.youtube.com/@IfeBizOnline" target="_blank" rel="noreferrer" aria-label="YouTube" data-testid="link-youtube"><Youtube size={16} /></a></div></div></div><div className="footer-bottom"><span>© 2026 IfeBiz Online.</span><span>Serving businesses across Osun State and beyond.</span></div></div></footer>;
 }
 
 function Home() {

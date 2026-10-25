@@ -1,6 +1,6 @@
 # IfeBiz Online
 
-A premium one-page marketing website for IfeBiz Online, helping businesses in Ile-Ife build professional online presences and convert visitors into WhatsApp enquiries.
+A premium one-page marketing website for IfeBiz Online, based in Ile-Ife and helping businesses across Osun State and beyond build professional online presences and convert visitors into WhatsApp enquiries.
 
 ## Run & Operate
 
@@ -37,7 +37,7 @@ A premium one-page marketing website for IfeBiz Online, helping businesses in Il
 
 ## Product
 
-IfeBiz Online presents website design and digital presence services for businesses in Ile-Ife, with clear service information and WhatsApp enquiry calls to action.
+IfeBiz Online is based in Ile-Ife and presents website design and digital presence services for businesses across Osun State and beyond, with clear service information and WhatsApp enquiry calls to action.
 
 ## User preferences
 
