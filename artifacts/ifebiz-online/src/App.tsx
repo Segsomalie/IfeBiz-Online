@@ -91,19 +91,19 @@ const stories = [
 const packages = [
   {
     name: 'Starter', price: '₦30,000', intro: 'Perfect for small businesses.',
-    features: ['Beautiful mobile-friendly website', 'Up to 5 pages', 'WhatsApp integration', 'Google Maps', 'Contact Form', 'Social Media links', 'Basic SEO'],
+    features: ['Beautiful mobile-friendly website', 'Up to 3 pages', 'WhatsApp integration', 'Contact Form', 'Social Media links', 'Basic SEO', 'Testimonials'],
   },
   {
     name: 'Business', price: '₦60,000', intro: 'Best for growing businesses.', popular: true,
-    features: ['Everything in Starter', 'Product/Service catalogue', 'Photo gallery', 'Testimonials', 'Google indexing', 'Multiple enquiry forms', 'Premium animations', 'Better SEO'],
+    features: ['Everything in Starter', 'Up to 6 pages', 'Product/Service catalogue', 'Photo gallery', 'Google indexing', 'Multiple enquiry forms', 'Product Customization Functionality', 'Better SEO'],
   },
   {
     name: 'Premium', price: '₦80,000', intro: 'Designed for businesses ready to grow.',
-    features: ['Everything in Business', 'Blog', 'Customer reviews', 'Booking/Appointment system', 'Admin Dashboard', 'Advanced contact options', 'Promotional banners', 'Analytics ready'],
+    features: ['Everything in Business', 'Up to 8 pages', 'Blog', 'Customer reviews', 'Admin Dashboard', 'Promotional banners', 'Analytics ready'],
   },
   {
     name: 'Enterprise', price: '₦120,000', intro: 'For businesses needing advanced functionality.',
-    features: ['Everything in Premium', 'E-commerce', 'Customer accounts', 'Order history', 'Online payments', 'Admin Dashboard', 'Product management', 'Sales tracking', 'Advanced reports', 'Future scalability'],
+    features: ['Everything in Premium', 'Up to 12 pages', 'E-commerce', 'Customer accounts', 'Order history', 'Online payments', 'Admin Dashboard', 'Product management', 'Sales tracking', 'Advanced reports', 'Future scalability'],
   },
 ];
 
@@ -234,6 +234,12 @@ function Packages() {
         <ul className="feature-list">{item.features.map((feature) => <li key={feature}><Check size={14} />{feature}</li>)}</ul>
         <a className={`button ${item.popular ? 'button-primary' : 'button-outline'}`} href={whatsapp(`Hello, I'm interested in the ${item.name} website package.`)} target="_blank" rel="noreferrer" data-testid={`link-package-${item.name.toLowerCase()}`}><MessageCircle size={15} /> Chat on WhatsApp</a>
       </article>)}</div>
+      <div className="section-heading center">
+        <h2>Flexible Upgrades &amp; Payment</h2>
+        <p>You can start with any package and upgrade later — you only pay the difference between your current package and the new one.</p>
+        <p>For the first build, we usually take 50% deposit to begin the project and the remaining 50% when the website is completed.</p>
+        <p>Website maintenance and future updates are also available, and we are happy to keep working with you as your business grows.</p>
+      </div>
     </div>
   </section>;
 }
@@ -255,11 +261,11 @@ function WebsiteTypes() {
 }
 
 function Testimonials() {
-  const testimonials = [[techademImage, 'Techadem', 'A polished digital presence that makes technical work feel approachable.'], [ochelImage, "O'chel Foods", 'A warm, reassuring experience for a business people can trust.'], [aboImage, 'ABO Wears', 'A confident showcase that lets the quality of the work lead.']];
+  const testimonials = [[techademImage, 'Techadem'], [ochelImage, "O'chel Foods"], [aboImage, 'ABO Wears']];
   const shift = (direction: number) => document.getElementById('testimonial-track')?.scrollBy({ left: direction * 290, behavior: 'smooth' });
   return <section id="testimonials" className="section warm-section"><div className="container">
     <div className="testimonial-intro"><div className="section-heading"><div className="eyebrow">Words from the other side</div><h2>Good work should leave people <span className="serif">smiling.</span></h2><p>Real conversations from businesses we have helped bring online.</p></div><div className="carousel-controls"><button className="icon-button" onClick={() => shift(-1)} aria-label="Previous testimonial" data-testid="button-testimonial-previous"><ArrowLeft size={18} /></button><button className="icon-button" onClick={() => shift(1)} aria-label="Next testimonial" data-testid="button-testimonial-next"><ArrowRight size={18} /></button></div></div>
-     <div className="testimonial-track" id="testimonial-track">{testimonials.map(([image, name, text], index) => <article className="testimonial-card" key={name} data-testid={`card-testimonial-${index}`}><div className={`phone-frame ${name === 'ABO Wears' ? 'phone-frame-wide' : ''}`}><img src={image} alt={`${name} testimonial conversation`} loading="lazy" /></div><div className="testimonial-meta"><div><strong>{name}</strong><div style={{ color: '#728077', fontSize: '11px', marginTop: '4px' }}>{text}</div></div><span>Client note</span></div></article>)}</div>
+      <div className="testimonial-track" id="testimonial-track">{testimonials.map(([image, name], index) => <article className="testimonial-card" key={name} data-testid={`card-testimonial-${index}`}><div className={`phone-frame ${name === 'ABO Wears' ? 'phone-frame-wide' : ''}`}><img src={image} alt={`${name} testimonial conversation`} loading="lazy" /></div><div className="testimonial-meta"><strong>{name}</strong></div></article>)}</div>
   </div></section>;
 }
 
