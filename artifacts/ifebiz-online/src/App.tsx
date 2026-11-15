@@ -98,11 +98,11 @@ const packages = [
     features: ['Everything in Starter', 'Up to 6 pages', 'Product/Service catalogue', 'Photo gallery', 'Google indexing', 'Multiple enquiry forms', 'Product Customization Functionality', 'Better SEO'],
   },
   {
-    name: 'Premium', price: '₦80,000', intro: 'Designed for businesses ready to grow.',
+    name: 'Premium', price: '₦100,000', intro: 'Designed for businesses ready to grow.',
     features: ['Everything in Business', 'Up to 8 pages', 'Blog', 'Customer reviews', 'Admin Dashboard', 'Promotional banners', 'Analytics ready'],
   },
   {
-    name: 'Enterprise', price: '₦120,000', intro: 'For businesses needing advanced functionality.',
+    name: 'Enterprise', price: '₦150,000', intro: 'For businesses needing advanced functionality.',
     features: ['Everything in Premium', 'Up to 12 pages', 'E-commerce', 'Customer accounts', 'Order history', 'Online payments', 'Admin Dashboard', 'Product management', 'Sales tracking', 'Advanced reports', 'Future scalability'],
   },
 ];
